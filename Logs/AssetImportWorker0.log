@@ -384,3 +384,4 @@ Received Import Request.
 Start importing Assets/models/Lindsay/Upperbody.fbx using Guid(5092a0cce59f70f479d9cff129bfb45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fca58412dfef4fc3125115f05d3914') in 0.027557 seconds 
   Import took 0.031131 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

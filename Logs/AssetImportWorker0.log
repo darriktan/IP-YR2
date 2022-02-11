@@ -248,3 +248,4 @@ Received Import Request.
 Start importing Assets/models/Lindsay/Texture/TrimsheetForBed.mat using Guid(08a0ba5931c598146b8f4be79d4d1d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3f1357fa6b5f2560f166b3a66ad324') in 0.009614 seconds 
   Import took 0.013260 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

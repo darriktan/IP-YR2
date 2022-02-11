@@ -137,3 +137,12 @@ Received Import Request.
 Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d6ced732debfe396cacc5dfe09a263') in 0.056610 seconds 
   Import took 0.061588 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1600.136909 seconds.
+  path: Assets/models/Lindsay/Human_Bandage(split).fbx
+  artifactKey: Guid(a5e560f5ccd179245ba45bc276b0e771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/models/Lindsay/Human_Bandage(split).fbx using Guid(a5e560f5ccd179245ba45bc276b0e771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab1b425fa5858a485ef5ea4ff1ce17c6') in 0.382179 seconds 
+  Import took 0.390238 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -15,7 +15,6 @@ public class CPR : MonoBehaviour
     public float tooSlow = 0.6f;
     public int cprGoal = 3;
 
-    //[HideInInspector]
     public bool useTimer;
     public float cprTime = 0f;
 

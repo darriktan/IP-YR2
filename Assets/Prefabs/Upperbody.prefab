@@ -32,7 +32,6 @@ Transform:
   m_LocalScale: {x: 4.346136, y: 4.5178084, z: 4.3461356}
   m_Children:
   - {fileID: 8297530279990794418}
-  - {fileID: 5234148730844418629}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -89.736, y: 70.981, z: 19.024}
@@ -190,36 +189,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.08, z: 0.003}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &4016523351308246373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5234148730844418629}
-  m_Layer: 0
-  m_Name: BandagingColliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5234148730844418629
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4016523351308246373}
-  m_LocalRotation: {x: 0.49851227, y: -0.5007334, z: -0.49930468, w: 0.5014444}
-  m_LocalPosition: {x: 0.0003443699, y: 0.38791823, z: 0.042241976}
-  m_LocalScale: {x: 0.22134638, y: 0.23008928, z: 0.23008941}
-  m_Children: []
-  m_Father: {fileID: 6489500037589936342}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6799836041375801831
 GameObject:
   m_ObjectHideFlags: 0

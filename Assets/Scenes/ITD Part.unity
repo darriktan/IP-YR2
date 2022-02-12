@@ -2092,7 +2092,6 @@ MonoBehaviour:
   tooFast: 0.5
   tooSlow: 0.6
   cprGoal: 3
-  timerTime: 0
   useTimer: 0
   cprTime: 0
 --- !u!1001 &755632642
@@ -5058,9 +5057,17 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2702956798288625576, guid: 7a6be421c7d9aa548bc8d3a1456cb80d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3736911548208452074, guid: 7a6be421c7d9aa548bc8d3a1456cb80d, type: 3}
       propertyPath: m_TagString
       value: FirstCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016523351308246373, guid: 7a6be421c7d9aa548bc8d3a1456cb80d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6489500037589936342, guid: 7a6be421c7d9aa548bc8d3a1456cb80d, type: 3}
       propertyPath: m_RootOrder

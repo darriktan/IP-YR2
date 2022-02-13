@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 93408135595018437}
   - component: {fileID: 93408135595018436}
   m_Layer: 0
-  m_Name: Bandage Interactor
+  m_Name: Bandage Socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

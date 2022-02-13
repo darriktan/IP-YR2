@@ -15,11 +15,11 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - Test
-  - 
-  - 
-  - 
-  - 
-  - 
+  - disinfectant
+  - box
+  - water
+  - ointment
+  - bandage
   - 
   - 
   - 

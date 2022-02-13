@@ -7,6 +7,10 @@ public class Bandaging : MonoBehaviour
     public List<GameObject> bandageList = new List<GameObject>();
     public List<GameObject> bcolliderList = new List<GameObject>();
 
+    public GameObject disinfectantSocket;
+    public GameObject gauzeSocket;
+    public GameObject bandageColliders;
+
     public int colliderNum = 0;
     public int bandageCount = 0;
 
@@ -68,9 +72,23 @@ public class Bandaging : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddedDisinfectant()
     {
-        
+        disinfectantSocket.gameObject.SetActive(false);
+        gauzeSocket.gameObject.SetActive(true);
+        Debug.Log("hi");
+    }
+
+    public void AddedGauze()
+    {
+        gauzeSocket.gameObject.SetActive(false);
+        bandageColliders.gameObject.SetActive(true);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gauzeSocket.gameObject.SetActive(false);
+        bandageColliders.gameObject.SetActive(false);
     }
 }

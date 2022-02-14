@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bandaging : MonoBehaviour
 {
+    public GameObject theBandageBody;
+    public GameObject theCprBody;
+
     public List<GameObject> bandageList = new List<GameObject>();
     public List<GameObject> bcolliderList = new List<GameObject>();
 
@@ -13,6 +16,7 @@ public class Bandaging : MonoBehaviour
 
     public int colliderNum = 0;
     public int bandageCount = 0;
+    public bool bandageComplete = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,6 +72,13 @@ public class Bandaging : MonoBehaviour
                 {
                     bcolliderList[i].gameObject.SetActive(true);
                 }
+            }
+            else if (bandageCount == 4)
+            {
+                bandageComplete = true;
+                Debug.Log("bdone");
+                theBandageBody.gameObject.SetActive(!bandageComplete);
+                theCprBody.gameObject.SetActive(bandageComplete);
             }
         }
     }

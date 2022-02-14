@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8562114584755535171}
   - component: {fileID: 5702127075037038691}
   m_Layer: 0
-  m_Name: Upperbody
+  m_Name: cprBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7475276771853957909}
   m_Layer: 0
   m_Name: Collider1
-  m_TagString: Untagged
+  m_TagString: FirstCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 7013772617576865711}
   m_Layer: 0
   m_Name: Collider2
-  m_TagString: Untagged
+  m_TagString: SecondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

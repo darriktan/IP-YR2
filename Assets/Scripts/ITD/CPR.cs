@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CPR : MonoBehaviour
 {
-    //public GameObject collider1;
-    //public GameObject collider2;
+    public Questing questingScript;
+
+    public GameObject cprColliders;
 
     public int collisionCount = 0;
     public int validCprAttempt = 0;
@@ -71,6 +72,8 @@ public class CPR : MonoBehaviour
             if(validCprAttempt == cprGoal)
             {
                 cprComplete = true;
+                cprColliders.gameObject.SetActive(!cprComplete);
+                questingScript.PatientQuestStatus();
             }
         }
     }

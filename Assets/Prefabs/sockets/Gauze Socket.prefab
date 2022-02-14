@@ -1110,7 +1110,6 @@ GameObject:
   - component: {fileID: 7488902466957453749}
   - component: {fileID: 5732126644838308757}
   - component: {fileID: 3543801470171335992}
-  - component: {fileID: 7196898374190781482}
   m_Layer: 0
   m_Name: Gauze Socket
   m_TagString: Untagged
@@ -1176,7 +1175,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7196898374190781482}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Bandaging, Assembly-CSharp
         m_MethodName: AddedGauze
         m_Mode: 1
@@ -1209,25 +1208,6 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!114 &7196898374190781482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7417907695268063733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef8456a12b7dc64fa6c719c8f5392d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bandageList: []
-  bcolliderList: []
-  disinfectantSocket: {fileID: 0}
-  gauzeSocket: {fileID: 7417907695268063733}
-  bandageColliders: {fileID: 0}
-  colliderNum: 0
-  bandageCount: 0
 --- !u!1 &7837409524691007315
 GameObject:
   m_ObjectHideFlags: 0

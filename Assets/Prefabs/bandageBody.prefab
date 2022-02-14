@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 3101597824571238732}
   - component: {fileID: 8550434664515045007}
   m_Layer: 0
-  m_Name: Human_Bandage(split)
+  m_Name: bandageBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,9 +592,9 @@ Transform:
   m_LocalPosition: {x: 0.4254241, y: -1.1659361, z: 0}
   m_LocalScale: {x: 7.641465, y: 7.641465, z: 7.641465}
   m_Children:
-  - {fileID: 7994585923435256035}
   - {fileID: 2943565150938683997}
   - {fileID: 2249588514570459012}
+  - {fileID: 7994585923435256035}
   m_Father: {fileID: 3101597824571238732}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -760,7 +760,7 @@ Transform:
   - {fileID: 2682584098616493431}
   - {fileID: 4138879985281573801}
   m_Father: {fileID: 1537003410582373533}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3119961679372800474
 GameObject:
@@ -1598,7 +1598,7 @@ Transform:
   m_Children:
   - {fileID: 5037902938311080070}
   m_Father: {fileID: 1537003410582373533}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &6241740853201262414
 SphereCollider:
@@ -2388,7 +2388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1094503336054758813, guid: 391d06494562fd345ab3d5934457089a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1094503336054758813, guid: 391d06494562fd345ab3d5934457089a, type: 3}
       propertyPath: m_LocalScale.x

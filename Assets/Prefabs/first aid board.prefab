@@ -653,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7e960c8b952969c47bee38df5ccb9518, type: 2}
     - target: {fileID: 7417907695268063733, guid: 6c0d311e1b4de7441bea2b839fcbdd7b, type: 3}
       propertyPath: m_Name
-      value: Gauze Socket
+      value: bGauze Socket
       objectReference: {fileID: 0}
     - target: {fileID: 7488902466957453749, guid: 6c0d311e1b4de7441bea2b839fcbdd7b, type: 3}
       propertyPath: m_RootOrder
@@ -805,7 +805,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 93408135595018435, guid: 1d9e4cd0d42fae5419e09c32f87085d3, type: 3}
       propertyPath: m_Name
-      value: Bandage Socket
+      value: cBandage Socket
       objectReference: {fileID: 0}
     - target: {fileID: 93408135595018438, guid: 1d9e4cd0d42fae5419e09c32f87085d3, type: 3}
       propertyPath: m_RootOrder
@@ -1023,7 +1023,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7417907695268063733, guid: 6c0d311e1b4de7441bea2b839fcbdd7b, type: 3}
       propertyPath: m_Name
-      value: Gauze Socket
+      value: cGauze Socket
       objectReference: {fileID: 0}
     - target: {fileID: 7488902466957453749, guid: 6c0d311e1b4de7441bea2b839fcbdd7b, type: 3}
       propertyPath: m_RootOrder
@@ -1547,7 +1547,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 93408135595018435, guid: 1d9e4cd0d42fae5419e09c32f87085d3, type: 3}
       propertyPath: m_Name
-      value: Bandage Socket
+      value: sBandage Socket
       objectReference: {fileID: 0}
     - target: {fileID: 93408135595018438, guid: 1d9e4cd0d42fae5419e09c32f87085d3, type: 3}
       propertyPath: m_RootOrder

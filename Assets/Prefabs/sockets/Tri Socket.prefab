@@ -44,7 +44,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8566502803721750422
 MonoBehaviour:
@@ -63,7 +63,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 1024
   m_AttachTransform: {fileID: 5601160530594374404}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -122,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0059999824
+      value: 0.0014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalPosition.y

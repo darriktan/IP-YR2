@@ -19,12 +19,15 @@ public class PackingQuest : MonoBehaviour
     public bool cutPacked;
     public bool brokenPacked;
 
+    //public Animator lidclosing;
+
     public void PackedWater()
     {
         waterPacked = true;
         if(waterPacked && ointmentPacked && bgauzePacked)
         {
             burnPacked = true;
+            //lidclosing.anim
         }
     }
 

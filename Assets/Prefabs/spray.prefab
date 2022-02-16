@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1682115769108528672}
   - component: {fileID: 4067903374461547947}
   - component: {fileID: 744801289622847044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6642264614342912162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 11.8, z: 3.3}
-  m_Center: {x: -0.0000059604645, y: -1.843822, z: -0.0000029802322}
+  m_Size: {x: 5.2793174, y: 10.23852, z: 2.8996222}
+  m_Center: {x: -0.000005867332, y: -1.8238038, z: -0.0000029802322}
 --- !u!54 &4067903374461547947
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6223913352340442030}
   - component: {fileID: 153545691931954281}
   - component: {fileID: 1135963262828966148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 8597061155991898218}
   - component: {fileID: 6328216839363863148}
   - component: {fileID: 812403903510013225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 7013477504411894372}
   - component: {fileID: 4293868139227515498}
   - component: {fileID: 759078793202648612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ointment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,8 +208,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 16, z: 7.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.892161, y: 15.56583, z: 6.8053284}
+  m_Center: {x: -0.043416582, y: 0.00000037252903, z: 0.00000037252903}
 --- !u!54 &4293868139227515498
 Rigidbody:
   m_ObjectHideFlags: 0

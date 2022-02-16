@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Burns : MonoBehaviour
 {
+    public GameObject moveTo;
+
     public GameObject theBurnBody;
     public GameObject theBandageBody;
 
-    public GameObject waterSocket;
+    //public GameObject waterSocket;
     public GameObject ointmentSocket;
     public GameObject burnGauzeSocket;
 
@@ -15,22 +17,25 @@ public class Burns : MonoBehaviour
 
     public void AddedWater()
     {
-        waterSocket.gameObject.SetActive(false);
+        //waterSocket.gameObject.SetActive(false);
         ointmentSocket.gameObject.SetActive(true);
         Debug.Log("hi");
     }
 
     public void AddedOintment()
     {
-        ointmentSocket.gameObject.SetActive(false);
+        //ointmentSocket.gameObject.SetActive(false);
         burnGauzeSocket.gameObject.SetActive(true);
     }
 
     public void AddedBurnGauze()
     {
-        burnGauzeSocket.gameObject.SetActive(false);
+        //burnGauzeSocket.gameObject.SetActive(false);
         burnComplete = true;
-        theBurnBody.gameObject.SetActive(!burnComplete);
+        if(burnComplete)
+        {
+            theBurnBody.transform.position = new Vector3(moveTo.transform.position.x , moveTo.transform.position.y, moveTo.transform.position.z);
+        }
         theBandageBody.gameObject.SetActive(burnComplete);
     }
 

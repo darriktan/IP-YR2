@@ -11,8 +11,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
 {
     public FirebaseAuth auth;
 
-    public TextMeshProUGUI playerXP;
-    public TextMeshProUGUI playerTimeSpent;
+    public TextMeshProUGUI playerGameTimer;
     public TextMeshProUGUI playerHighScore;
     public TextMeshProUGUI playerLastPlayed;
     public TextMeshProUGUI playerName;
@@ -46,8 +45,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
         if (playerStats != null)
         {
             Debug.Log("playerstats.... :" + playerStats.SimplePlayerStatsToJson());
-            playerXP.text = playerStats.xp + "xp";
-            playerTimeSpent.text = playerStats.totalTimeSpent + " secs";
+            playerGameTimer.text = playerStats.gameTimer + " secs";
             playerHighScore.text = playerStats.highScore.ToString();
             playerLastPlayed.text = UnixToDateTime(playerStats.updatedOn);
         }
@@ -61,8 +59,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
 
     public void ResetStatusUI()
     {
-        playerXP.text = "0 XP";
-        playerTimeSpent.text = "0";
+        playerGameTimer.text = "0";
         playerHighScore.text = "0";
         playerLastPlayed.text = "0";
     }

@@ -111,8 +111,6 @@ public class SimpleAuthManager : MonoBehaviour
         //root/players/$uuid
         await dbReference.Child("players/" + uuid).SetRawJsonValueAsync(newPlayer.SimpleGamePlayerToJson());
 
-        await AddPlayerToClan(uuid);
-
         //Update auth player with new display name -> tagging along the username input field
         //UpdatePlayerDisplayName(displayName);
     }

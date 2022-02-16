@@ -6,9 +6,8 @@ using System;
 public class SimplePlayerStats
 {
     public string userName;
-    public int totalTimeSpent;
+    public float gameTimer = 0f;
     public int highScore;
-    public int xp;
     public long updatedOn;
     public long createdOn;
 
@@ -18,13 +17,12 @@ public class SimplePlayerStats
 
     }
 
-    public SimplePlayerStats(string userName, int highScore, int xp = 0,
-        int totalTimeSpent = 0)
+    public SimplePlayerStats(string userName, int highScore,
+        float gameTimer = 0f)
     {
         this.userName = userName;
-        this.s = highScore;
-        this.xp = xp;
-        this.totalTimeSpent = totalTimeSpent;
+        this.highScore = highScore;
+        this.gameTimer = gameTimer;
 
         var timestamp = this.GetTimeUnix();
         this.updatedOn = timestamp;

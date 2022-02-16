@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "427939226981",
+    "project_id": "ip-project-2022",
+    "storage_bucket": "ip-project-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427939226981:android:19f7ffbfdc2a59668ced8c",
+        "android_client_info": {
+          "package_name": "com.sixFEET.IPYR2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427939226981-jr4fu4t0iedba15qil9cukdmnhahpl7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz1bnBEaYMlFJtKP3sIWedcMP6pQiB1ak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427939226981-jr4fu4t0iedba15qil9cukdmnhahpl7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

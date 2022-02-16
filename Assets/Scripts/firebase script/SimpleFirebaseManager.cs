@@ -30,10 +30,9 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// </summary>
     /// <param name="uuid"></param>
     /// <param name="score"></param>
-    /// <param name="xp"></param>
     /// <param name="time"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int score, int xp, int time, string displayName)
+    public void UpdatePlayerStats(string uuid, int score, float time, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -52,8 +51,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
                     //Update player stats
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
-                    sp.xp += xp;
-                    sp.totalTimeSpent += time;
+                    sp.gameTimer += time;
                     sp.updatedOn = sp.GetTimeUnix();
 
                     //check if theres a new high score
@@ -72,7 +70,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
                     //CREATE player stats
                     //if there no existing data, it's our first time player
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName, score, xp, time);
+                    SimplePlayerStats sp = new SimplePlayerStats(displayName, score, time);
 
                     SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, score);
 

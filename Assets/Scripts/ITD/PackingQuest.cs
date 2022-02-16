@@ -19,7 +19,10 @@ public class PackingQuest : MonoBehaviour
     public bool cutPacked;
     public bool brokenPacked;
 
-    //public Animator lidclosing;
+    public Animator burnLidClosing;
+    public Animator sprainLidClosing;
+    public Animator cutLidClosing;
+    public Animator brokeLidClosing;
 
     public void PackedWater()
     {
@@ -27,7 +30,7 @@ public class PackingQuest : MonoBehaviour
         if(waterPacked && ointmentPacked && bgauzePacked)
         {
             burnPacked = true;
-            //lidclosing.anim
+            burnLidClosing.SetBool("burnPacked", burnPacked);
         }
     }
 
@@ -37,6 +40,7 @@ public class PackingQuest : MonoBehaviour
         if (waterPacked && ointmentPacked && bgauzePacked)
         {
             burnPacked = true;
+            burnLidClosing.SetBool("burnPacked", burnPacked);
         }
     }
 
@@ -46,6 +50,7 @@ public class PackingQuest : MonoBehaviour
         if (waterPacked && ointmentPacked && bgauzePacked)
         {
             burnPacked = true;
+            burnLidClosing.SetBool("burnPacked", burnPacked);
         }
     }
 
@@ -55,6 +60,7 @@ public class PackingQuest : MonoBehaviour
         if (icepackPacked && sbandagePacked)
         {
             sprainPacked = true;
+            sprainLidClosing.SetBool("sprainPacked", sprainPacked);
         }
     }
 
@@ -64,6 +70,7 @@ public class PackingQuest : MonoBehaviour
         if (icepackPacked && sbandagePacked)
         {
             sprainPacked = true;
+            sprainLidClosing.SetBool("sprainPacked", sprainPacked);
         }
     }
 
@@ -73,6 +80,7 @@ public class PackingQuest : MonoBehaviour
         if (disinfectantPacked && bandaidboxPacked && cgauzePacked && cbandagePacked)
         {
             cutPacked = true;
+            cutLidClosing.SetBool("cutPacked", cutPacked);
         }
     }
 
@@ -82,6 +90,7 @@ public class PackingQuest : MonoBehaviour
         if (disinfectantPacked && bandaidboxPacked && cgauzePacked && cbandagePacked)
         {
             cutPacked = true;
+            cutLidClosing.SetBool("cutPacked", cutPacked);
         }
     }
 
@@ -91,6 +100,7 @@ public class PackingQuest : MonoBehaviour
         if (disinfectantPacked && bandaidboxPacked && cgauzePacked && cbandagePacked)
         {
             cutPacked = true;
+            cutLidClosing.SetBool("cutPacked", cutPacked);
         }
     }
 
@@ -100,12 +110,14 @@ public class PackingQuest : MonoBehaviour
         if (disinfectantPacked && bandaidboxPacked && cgauzePacked && cbandagePacked)
         {
             cutPacked = true;
+            cutLidClosing.SetBool("cutPacked", cutPacked);
         }
     }
 
     public void PackedTriBandage()
     {
         brokenPacked = true;
+        brokeLidClosing.SetBool("brokePacked", brokenPacked);
     }
 
     public void UnpackedWater()

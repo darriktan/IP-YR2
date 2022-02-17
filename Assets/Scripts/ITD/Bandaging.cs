@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Bandaging : MonoBehaviour
 {
+    public Questing questingScript;
+
     public GameObject moveTo;
 
     public GameObject theBandageBody;
-    public GameObject theCprBody;
+    //public GameObject theCprBody;
 
     public List<GameObject> bandageList = new List<GameObject>();
     public List<GameObject> bcolliderList = new List<GameObject>();
@@ -19,6 +22,8 @@ public class Bandaging : MonoBehaviour
     public int colliderNum = 0;
     public int bandageCount = 0;
     public bool bandageComplete = false;
+
+    public TextMeshProUGUI cutQuestStatus;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -79,11 +84,12 @@ public class Bandaging : MonoBehaviour
             {
                 bandageComplete = true;
                 Debug.Log("bdone");
-                if (bandageComplete)
-                {
-                    theBandageBody.transform.position = new Vector3(moveTo.transform.position.x, moveTo.transform.position.y, moveTo.transform.position.z);
-                }
-                theCprBody.gameObject.SetActive(bandageComplete);
+                //if (bandageComplete)
+                //{
+                    //theBandageBody.transform.position = new Vector3(moveTo.transform.position.x, moveTo.transform.position.y, moveTo.transform.position.z);
+                //}
+                questingScript.PatientQuestStatus();
+                cutQuestStatus.text = "Complete";
             }
         }
     }

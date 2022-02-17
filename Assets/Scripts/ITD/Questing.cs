@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class Questing : MonoBehaviour
 {
-    public GameObject bandageBody;
-    public GameObject cprBody;
+    //public GameObject bandageBody;
+    //public GameObject cprBody;
 
     public Burns burnScript;
     public Bandaging bandagingScript;
@@ -26,6 +28,12 @@ public class Questing : MonoBehaviour
     public bool paitentQuestComplete = false;
     public bool packingQuestComplete = false;
 
+    public TextMeshProUGUI packingQuestStatus;
+    public TextMeshProUGUI timeUiMin;
+    public TextMeshProUGUI timeUiSec;
+
+    public string performanceGrade;
+
     public void PatientQuestStatus()
     {
         burnTreated = burnScript.burnComplete;
@@ -36,7 +44,7 @@ public class Questing : MonoBehaviour
         {
             paitentQuestComplete = true;
             Debug.Log("paitientComp" + gameTimer);
-
+            GameStatus();
         }
     }
 
@@ -51,7 +59,8 @@ public class Questing : MonoBehaviour
         {
             packingQuestComplete = true;
             Debug.Log("packingComp" + gameTimer);
-
+            packingQuestStatus.text = "Complete";
+            GameStatus();
         }
     }
 
@@ -61,13 +70,60 @@ public class Questing : MonoBehaviour
         {
             gameTimer += Time.deltaTime;
         }
+        var minuteTimer = Math.Floor(gameTimer / 60);
+        var secTimer = gameTimer % 60;
+        timeUiMin.text = minuteTimer.ToString("00");
+        timeUiSec.text = "  :" + secTimer.ToString("00");
+        if (secTimer >= 55 && minuteTimer >= 5)
+        {
+            timeUiMin.color = Color.red;
+            timeUiSec.color = Color.red;
+        }
+        else if(secTimer >= 55)
+        {
+            timeUiMin.color = Color.yellow;
+            timeUiSec.color = Color.yellow;
+        }
+        else
+        {
+            timeUiMin.color = Color.white;
+            timeUiSec.color = Color.white;
+        }
+    }
+
+    public void GameStatus()
+    {
+        if (paitentQuestComplete && packingQuestComplete)
+        {
+            if (gameTimer <= 360)
+            {
+                performanceGrade = "A";
+            }
+            else if (gameTimer <= 420)
+            {
+                performanceGrade = "B";
+            }
+            else if (gameTimer <= 480)
+            {
+                performanceGrade = "C";
+            }
+            else if (gameTimer <= 570)
+            {
+                performanceGrade = "D";
+            }
+            else
+            {
+                performanceGrade = "F";
+            }
+        }
+        //display grade and time on UI
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        bandageBody.gameObject.SetActive(false);
-        cprBody.gameObject.SetActive(false);
+        //bandageBody.gameObject.SetActive(false);
+        //cprBody.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

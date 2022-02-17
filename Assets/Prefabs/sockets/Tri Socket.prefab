@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8566502803721750422}
   m_Layer: 0
   m_Name: Tri Socket
-  m_TagString: Untagged
+  m_TagString: Sockets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.06
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8566502803721750422
 MonoBehaviour:
@@ -110,15 +110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4ecffe25e87ad042bcfc1e7d2b8a02f, type: 3}
       propertyPath: m_LocalPosition.x

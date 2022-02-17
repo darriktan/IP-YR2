@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CPR : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class CPR : MonoBehaviour
 
     public bool useTimer;
     public float cprTime = 0f;
+
+    public TextMeshProUGUI cprUI;
+    public TextMeshProUGUI cprQuestStatus;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -69,13 +73,25 @@ public class CPR : MonoBehaviour
         if(cprTime >= tooFast && cprTime <= tooSlow)
         {
             validCprAttempt += 1;
+            cprUI.text = "Just Right";
             if(validCprAttempt == cprGoal)
             {
                 cprComplete = true;
+                cprUI.text = "Good Job!";
                 cprColliders.gameObject.SetActive(!cprComplete);
                 questingScript.PatientQuestStatus();
+                cprQuestStatus.text = "Complete";
             }
         }
+        if(cprTime >= tooSlow)
+        {
+            cprUI.text = "Push Harder";
+        }
+        if (cprTime <= tooFast)
+        {
+            cprUI.text = "Push Softer";
+        }
+
     }
 
     // Update is called once per frame

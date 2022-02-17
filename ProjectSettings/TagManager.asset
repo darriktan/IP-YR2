@@ -10,6 +10,7 @@ TagManager:
   - bSecondCollider
   - bThirdCollider
   - bFourthCollider
+  - Sockets
   layers:
   - Default
   - TransparentFX

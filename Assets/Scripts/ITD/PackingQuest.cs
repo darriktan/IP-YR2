@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PackingQuest : MonoBehaviour
 {
+    public Questing questingScript;
+
     public bool waterPacked;
     public bool ointmentPacked;
     public bool bgauzePacked;
@@ -31,6 +33,7 @@ public class PackingQuest : MonoBehaviour
         {
             burnPacked = true;
             burnLidClosing.SetBool("burnPacked", burnPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -41,6 +44,7 @@ public class PackingQuest : MonoBehaviour
         {
             burnPacked = true;
             burnLidClosing.SetBool("burnPacked", burnPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -51,6 +55,7 @@ public class PackingQuest : MonoBehaviour
         {
             burnPacked = true;
             burnLidClosing.SetBool("burnPacked", burnPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -61,6 +66,7 @@ public class PackingQuest : MonoBehaviour
         {
             sprainPacked = true;
             sprainLidClosing.SetBool("sprainPacked", sprainPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -71,6 +77,7 @@ public class PackingQuest : MonoBehaviour
         {
             sprainPacked = true;
             sprainLidClosing.SetBool("sprainPacked", sprainPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -81,6 +88,7 @@ public class PackingQuest : MonoBehaviour
         {
             cutPacked = true;
             cutLidClosing.SetBool("cutPacked", cutPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -91,6 +99,7 @@ public class PackingQuest : MonoBehaviour
         {
             cutPacked = true;
             cutLidClosing.SetBool("cutPacked", cutPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -101,6 +110,7 @@ public class PackingQuest : MonoBehaviour
         {
             cutPacked = true;
             cutLidClosing.SetBool("cutPacked", cutPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -111,6 +121,7 @@ public class PackingQuest : MonoBehaviour
         {
             cutPacked = true;
             cutLidClosing.SetBool("cutPacked", cutPacked);
+            questingScript.PackingQuestStatus();
         }
     }
 
@@ -118,6 +129,7 @@ public class PackingQuest : MonoBehaviour
     {
         brokenPacked = true;
         brokeLidClosing.SetBool("brokePacked", brokenPacked);
+        questingScript.PackingQuestStatus();
     }
 
     public void UnpackedWater()

@@ -7,7 +7,7 @@ public class SimplePlayerStats
 {
     public string userName;
     public float gameTimer = 0f;
-    public int highScore;
+    public string gradeScore;
     public long updatedOn;
     public long createdOn;
 
@@ -17,11 +17,11 @@ public class SimplePlayerStats
 
     }
 
-    public SimplePlayerStats(string userName, int highScore,
+    public SimplePlayerStats(string userName, string gradeScore,
         float gameTimer = 0f)
     {
         this.userName = userName;
-        this.highScore = highScore;
+        this.gradeScore = gradeScore;
         this.gameTimer = gameTimer;
 
         var timestamp = this.GetTimeUnix();

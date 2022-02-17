@@ -29,10 +29,10 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// Create a new entry ONLY if its the first time playing
     /// </summary>
     /// <param name="uuid"></param>
-    /// <param name="score"></param>
+    /// <param name="grade"></param>
     /// <param name="time"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int score, float time, string displayName)
+    public void UpdatePlayerStats(string uuid, string grade, float time, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -56,10 +56,10 @@ public class SimpleFirebaseManager : MonoBehaviour
 
                     //check if theres a new high score
                     //update leaderboard if theres a new highscore
-                    if (score > sp.highScore)
+                    if (score > sp.gradeScore)
                     {
-                        sp.highScore = score;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.highScore, sp.updatedOn);
+                        sp.gradeScore = score;
+                        UpdatePlayerLeaderBoardEntry(uuid, sp.gradeScore, sp.updatedOn);
                     }
 
                     //update with entire temp object
@@ -82,12 +82,13 @@ public class SimpleFirebaseManager : MonoBehaviour
         });
     }
 
-    public void UpdatePlayerLeaderBoardEntry(string uuid, int highScore, long updatedOn)
+    public void UpdatePlayerLeaderBoardEntry(string uuid, string gradeScore, float gameTimer, long updatedOn)
     {
         //leaderboards/$uuid/highscore
         //leaderboards/$uuid/updatedOn
-        dbLeaderboardsReference.Child(uuid).Child("highScore").SetValueAsync(highScore);
+        dbLeaderboardsReference.Child(uuid).Child("gradeScore").SetValueAsync(gradeScore);
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
+        dbLeaderboardsReference.Child(uuid).Child("gameTimer").SetValueAsync(gameTimer);
     }
     
     public async Task<List<SimpleLeaderBoard>> GetLeaderboard(int limit = 5)
@@ -108,7 +109,6 @@ public class SimpleFirebaseManager : MonoBehaviour
 
                 if (ds.Exists)
                 {
-                    int rankCounter = 1;
                     foreach(DataSnapshot d in ds.Children)
                     {
                         //create temp objects based on the results
@@ -127,10 +127,8 @@ public class SimpleFirebaseManager : MonoBehaviour
                     //for each simpleleaderboard object inside our leaderboardlist
                     foreach(SimpleLeaderBoard lb in leaderBoardList)
                     {
-                        Debug.LogFormat("Leaderboard: Rank {0} Playername {1} High Score{2}",
-                            rankCounter, lb.userName, lb.highScore);
-
-                        rankCounter++;
+                        Debug.LogFormat("Leaderboard: Grade {0} Playername {1} FastestTime{2}",
+                            lb.gradeScore, lb.userName, lb.gameTimer);
                     }
                 }
             }

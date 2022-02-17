@@ -6,7 +6,8 @@ using System;
 public class SimpleLeaderBoard 
 {
     public string userName;
-    public int highScore;
+    public string gradeScore;
+    public float gameTimer;
     public long updatedOn;
 
     public SimpleLeaderBoard()
@@ -14,10 +15,11 @@ public class SimpleLeaderBoard
 
     }
 
-    public SimpleLeaderBoard(string userName, int highScore)
+    public SimpleLeaderBoard(string userName, string gradeScore, float gameTimer)
     {
+        this.gradeScore = gradeScore;
         this.userName = userName;
-        this.highScore = highScore;
+        this.gameTimer = gameTimer;
         this.updatedOn = GetTimeUnix();
     }
 

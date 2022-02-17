@@ -12,7 +12,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
     public FirebaseAuth auth;
 
     public TextMeshProUGUI playerGameTimer;
-    public TextMeshProUGUI playerHighScore;
+    public TextMeshProUGUI playerGradeScore;
     public TextMeshProUGUI playerLastPlayed;
     public TextMeshProUGUI playerName;
 
@@ -46,7 +46,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
         {
             Debug.Log("playerstats.... :" + playerStats.SimplePlayerStatsToJson());
             playerGameTimer.text = playerStats.gameTimer + " secs";
-            playerHighScore.text = playerStats.highScore.ToString();
+            playerGradeScore.text = playerStats.gradeScore.ToString();
             playerLastPlayed.text = UnixToDateTime(playerStats.updatedOn);
         }
         else
@@ -60,7 +60,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
     public void ResetStatusUI()
     {
         playerGameTimer.text = "0";
-        playerHighScore.text = "0";
+        playerGradeScore.text = "-";
         playerLastPlayed.text = "0";
     }
 

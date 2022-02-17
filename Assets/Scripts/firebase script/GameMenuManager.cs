@@ -22,7 +22,7 @@ public class GameMenuManager : MonoBehaviour
     {
         InitializeFirebase();
 
-        displayName.text = "Smasher: " + auth.CurrentUser.DisplayName;
+        displayName.text = "First Responders: " + auth.CurrentUser.DisplayName;
     }
 
     public void InitializeFirebase()
@@ -38,7 +38,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void GoToLeaderboard()

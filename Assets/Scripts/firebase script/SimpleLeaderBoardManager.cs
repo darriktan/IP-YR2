@@ -1,4 +1,4 @@
-using System.Collections;
+  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +28,6 @@ public class SimpleLeaderBoardManager : MonoBehaviour
     public async void UpdateLeaderboardUI()
     {
         var leaderBoardList = await fbManager.GetLeaderboard(5);
-        int rankCounter = 1;
 
         //clear all leaderboard entries in UI
         foreach(Transform item in tableContent)
@@ -40,22 +39,21 @@ public class SimpleLeaderBoardManager : MonoBehaviour
         //assign each value from list to the prefab text content
         foreach(SimpleLeaderBoard lb in leaderBoardList)
         {
-            Debug.LogFormat("Leader Mgr: Rank {0} Playername {1} Highscore {2}",
-                rankCounter, lb.userName, lb.highScore);
+            Debug.LogFormat("Leader Mgr: Grade {0} Playername {1} FastestTime {2}",
+                lb.gradeScore, lb.userName, lb.gameTimer);
 
             //create prefab in the position of tableContent
             GameObject entry = Instantiate(rowPrefab, tableContent);
             TextMeshProUGUI[] leaderBoardDetails = entry.GetComponentsInChildren<TextMeshProUGUI>();
-            leaderBoardDetails[0].text = rankCounter.ToString();
+            leaderBoardDetails[0].text = lb.gradeScore.ToString();
             leaderBoardDetails[1].text = lb.userName;
-            leaderBoardDetails[2].text = lb.highScore.ToString();
+            leaderBoardDetails[2].text = lb.gameTimer.ToString();
 
-            rankCounter++;
         }
     }
 
     public void GoToGameMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

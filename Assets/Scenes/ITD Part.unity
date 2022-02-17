@@ -9773,7 +9773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df242f66b57079c459376636f0b92475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftTeleportRay: {fileID: 0}
   rightTeleportRay: {fileID: 0}
   teleportActivationButton: 0
   activationThreshold: 0.1

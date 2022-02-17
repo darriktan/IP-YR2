@@ -21,6 +21,7 @@ public class CPR : MonoBehaviour
     public float cprTime = 0f;
 
     public TextMeshProUGUI cprUI;
+    public TextMeshProUGUI cprUITries;
     public TextMeshProUGUI cprQuestStatus;
 
     private void OnTriggerEnter(Collider other)
@@ -74,6 +75,7 @@ public class CPR : MonoBehaviour
         {
             validCprAttempt += 1;
             cprUI.text = "Just Right";
+            cprUITries.text = validCprAttempt.ToString() + "/3";
             if(validCprAttempt == cprGoal)
             {
                 cprComplete = true;

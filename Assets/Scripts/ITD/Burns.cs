@@ -7,12 +7,6 @@ public class Burns : MonoBehaviour
 {
     public Questing questingScript;
 
-    public GameObject moveTo;
-
-    public GameObject theBurnBody;
-    //public GameObject theBandageBody;
-
-    //public GameObject waterSocket;
     public GameObject ointmentSocket;
     public GameObject burnGauzeSocket;
 
@@ -37,10 +31,6 @@ public class Burns : MonoBehaviour
     {
         //burnGauzeSocket.gameObject.SetActive(false);
         burnComplete = true;
-        //if(burnComplete)
-        //{
-            //theBurnBody.transform.position = new Vector3(moveTo.transform.position.x , moveTo.transform.position.y, moveTo.transform.position.z);
-        //}
         questingScript.PatientQuestStatus();
         burnQuestStatus.text = "Complete";
     }

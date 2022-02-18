@@ -29,10 +29,16 @@ public class Questing : MonoBehaviour
     public bool packingQuestComplete = false;
 
     public TextMeshProUGUI packingQuestStatus;
+    public double minuteTimer;
+    public float secTimer;
     public TextMeshProUGUI timeUiMin;
     public TextMeshProUGUI timeUiSec;
 
+    public TextMeshProUGUI gradeText;
+    public TextMeshProUGUI timetakenText;
+
     public string performanceGrade;
+    public GameObject endGameUI;
 
     public void PatientQuestStatus()
     {
@@ -70,8 +76,8 @@ public class Questing : MonoBehaviour
         {
             gameTimer += Time.deltaTime;
         }
-        var minuteTimer = Math.Floor(gameTimer / 60);
-        var secTimer = gameTimer % 60;
+        minuteTimer = Math.Floor(gameTimer / 60);
+        secTimer = gameTimer % 60;
         timeUiMin.text = minuteTimer.ToString("00");
         timeUiSec.text = "  :" + secTimer.ToString("00");
         if (secTimer >= 55 && minuteTimer >= 5)
@@ -115,8 +121,11 @@ public class Questing : MonoBehaviour
             {
                 performanceGrade = "F";
             }
+            //display grade and time on UI
+            gradeText.text = performanceGrade;
+            timetakenText.text = minuteTimer.ToString("00") + "minute" + secTimer.ToString("00") + "seconds";
+            endGameUI.gameObject.SetActive(true);
         }
-        //display grade and time on UI
     }
 
     // Start is called before the first frame update

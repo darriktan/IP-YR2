@@ -4,30 +4,13 @@ using UnityEngine;
 
 public class ResetModel : MonoBehaviour
 {
-    public List<GameObject> itemList = new List<GameObject>();
-    public List<Transform> originalTransformList = new List<Transform>();
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        for(int i = 0; i < itemList.Count; i++)
-        {
-            originalTransformList.Add(itemList[i].transform);
-            Debug.Log(itemList[i].transform.position);
-        }
-    }
+    public GameObject resetSpawn;
 
     private void OnCollisionEnter(Collision collision)
     {
-        for (int j = 0; j < itemList.Count; j++)
-        {
-            if (collision.gameObject == itemList[j])
-            {
-                itemList[j].transform.position = new Vector3(originalTransformList[j].transform.position.x,
-                    originalTransformList[j].transform.position.y, originalTransformList[j].transform.position.x);
-                Debug.Log("pls reset");
-            }
-        }
+        collision.transform.position = new Vector3(resetSpawn.transform.position.x,
+            resetSpawn.transform.position.y, resetSpawn.transform.position.x);
+        Debug.Log("pls reset");
     }
     // Update is called once per frame
     void Update()

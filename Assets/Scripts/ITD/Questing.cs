@@ -6,6 +6,7 @@ using System;
 
 public class Questing : MonoBehaviour
 {
+    public GameManager theGameManager;
     //public GameObject bandageBody;
     //public GameObject cprBody;
 
@@ -125,6 +126,7 @@ public class Questing : MonoBehaviour
             gradeText.text = performanceGrade;
             timetakenText.text = minuteTimer.ToString("00") + "minute" + secTimer.ToString("00") + "seconds";
             endGameUI.gameObject.SetActive(true);
+            theGameManager.GameOver();
         }
     }
 

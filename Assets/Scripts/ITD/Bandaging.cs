@@ -7,15 +7,10 @@ public class Bandaging : MonoBehaviour
 {
     public Questing questingScript;
 
-    public GameObject moveTo;
-
-    public GameObject theBandageBody;
-    //public GameObject theCprBody;
-
     public List<GameObject> bandageList = new List<GameObject>();
     public List<GameObject> bcolliderList = new List<GameObject>();
 
-    //public GameObject disinfectantSocket;
+    public GameObject theCutBody;
     public GameObject gauzeSocket;
     public GameObject bandageColliders;
 
@@ -82,12 +77,8 @@ public class Bandaging : MonoBehaviour
             }
             else if (bandageCount == 4)
             {
-                bandageComplete = true;
+                theCutBody.GetComponent<Bandaging>().bandageComplete = true;
                 Debug.Log("bdone");
-                //if (bandageComplete)
-                //{
-                    //theBandageBody.transform.position = new Vector3(moveTo.transform.position.x, moveTo.transform.position.y, moveTo.transform.position.z);
-                //}
                 questingScript.PatientQuestStatus();
                 cutQuestStatus.text = "Complete";
             }
@@ -96,14 +87,12 @@ public class Bandaging : MonoBehaviour
 
     public void AddedDisinfectant()
     {
-        //disinfectantSocket.gameObject.SetActive(false);
         gauzeSocket.gameObject.SetActive(true);
         Debug.Log("hi");
     }
 
     public void AddedGauze()
     {
-        //gauzeSocket.gameObject.SetActive(false);
         bandageColliders.gameObject.SetActive(true);
     }
 

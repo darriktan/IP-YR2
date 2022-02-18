@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2918716550069805921}
   - component: {fileID: 6785866706208070180}
   - component: {fileID: 604130266025366547}
+  - component: {fileID: 1293281727997295768}
   m_Layer: 8
   m_Name: Bandage
   m_TagString: Untagged
@@ -228,3 +229,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43464023, y: 0.42583117, z: 0.3261731}
   m_Center: {x: 0, y: -0.000000014901159, z: 0}
+--- !u!114 &1293281727997295768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090478727512024051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef8456a12b7dc64fa6c719c8f5392d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questingScript: {fileID: 0}
+  moveTo: {fileID: 0}
+  theBandageBody: {fileID: 0}
+  bandageList: []
+  bcolliderList: []
+  gauzeSocket: {fileID: 0}
+  bandageColliders: {fileID: 0}
+  colliderNum: 0
+  bandageCount: 0
+  bandageComplete: 0
+  cutQuestStatus: {fileID: 0}

@@ -28,7 +28,7 @@ public class GameMenuManager : MonoBehaviour
         auth = FirebaseAuth.DefaultInstance;
     }
 
-    
+
     public void LogOut()
     {
         authMgr.LogoutUser();
@@ -42,12 +42,12 @@ public class GameMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

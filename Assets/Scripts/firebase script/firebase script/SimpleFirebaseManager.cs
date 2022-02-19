@@ -57,7 +57,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                     if (time > sp.gameTimer)
                     {
                         sp.gameTimer = time;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.gameTimer);
+                        UpdatePlayerLeaderBoardEntry(uuid, time);
                     }
 
                     //update with entire temp object

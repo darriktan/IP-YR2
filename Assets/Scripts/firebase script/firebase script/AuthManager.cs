@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 using System.Text.RegularExpressions;
 
-public class SimpleAuthManager : MonoBehaviour
+public class AuthManager : MonoBehaviour
 {
     //Firebase references
     public FirebaseAuth auth;
@@ -69,7 +69,7 @@ public class SimpleAuthManager : MonoBehaviour
             errorMsgContent.text = "Error in Signing Up. Invalid email or password";
             errorMsgContent.gameObject.SetActive(true);
         }
-        
+
     }
 
     public async Task<FirebaseUser> SignUpNewUserOnly(string email, string password)
@@ -95,7 +95,7 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 errorMsgContent.gameObject.SetActive(false);
                 newPlayer = task.Result;
-                
+
                 Debug.LogFormat("New Player Details {0} {1}", newPlayer.UserId, newPlayer.Email);
             }
         });
@@ -154,7 +154,7 @@ public class SimpleAuthManager : MonoBehaviour
         string email = emailInput.text.Trim();
         string password = passwordInput.text.Trim();
 
-        if(ValidateEmail(email) && ValidatePassword(password))
+        if (ValidateEmail(email) && ValidatePassword(password))
         {
             auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
             {
@@ -184,7 +184,7 @@ public class SimpleAuthManager : MonoBehaviour
 
     public void LogoutUser()
     {
-        if(auth.CurrentUser != null)
+        if (auth.CurrentUser != null)
         {
             Debug.LogFormat("Auth User {0} {1}", auth.CurrentUser.UserId, auth.CurrentUser.Email);
 
@@ -213,7 +213,7 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 Debug.LogFormat("Forget password email sent successfully...");
             }
-        }); 
+        });
         Debug.Log("ForgetPass");
     }
 
@@ -236,7 +236,7 @@ public class SimpleAuthManager : MonoBehaviour
     {
         bool isValid = false;
 
-        if(password != "" && password.Length >= 6)
+        if (password != "" && password.Length >= 6)
         {
             isValid = true;
         }
@@ -266,7 +266,7 @@ public class SimpleAuthManager : MonoBehaviour
             errorMsg = "Sign up fail\n";
             switch (errorCode)
             {
-                case AuthError.EmailAlreadyInUse: 
+                case AuthError.EmailAlreadyInUse:
                     errorMsg += "Email already in use.";
                     break;
                 case AuthError.WeakPassword:

@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         //isGameActive = false;
         if (!isPlayerStatUpdated)
         {
-            UpdatePlayerStat(this.theQuestingScript.gameTimer, xpPerGame, 30);
+            //UpdatePlayerStat(this.theQuestingScript.gameTimer, xpPerGame, 30);
         }
         isPlayerStatUpdated = true;
     }
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerStat(int score, int xp, int time)
     {
         Debug.Log("hi " + auth.CurrentUser.DisplayName);
-        firebaseMgr.UpdatePlayerStats(auth.CurrentUser.UserId, score, xp, time, authMgr.GetCurrentUserDisplayName());
+        //firebaseMgr.UpdatePlayerStats(auth.CurrentUser.UserId, score, xp, time, authMgr.GetCurrentUserDisplayName());
     }
 
     public void RestartGame()

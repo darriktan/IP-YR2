@@ -29,6 +29,7 @@ public class AuthManager : MonoBehaviour
     public GameObject loginBtn;
     public GameObject forgetPasswordBtn;
     public GameObject logoutBtn;
+    public bool StartGameTimer;
 
 
     public TextMeshProUGUI errorMsgContent;
@@ -172,6 +173,7 @@ public class AuthManager : MonoBehaviour
                     FirebaseUser currentPlayer = task.Result;
                     Debug.LogFormat("Welcome to First Responder {0} {1}", currentPlayer.UserId, currentPlayer.Email);
                     SceneManager.LoadScene(1);
+                    StartGameTimer = true;
                 }
             });
         }

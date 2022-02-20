@@ -21,6 +21,7 @@ public class GameMenuManager : MonoBehaviour
     public void Awake()
     {
         InitializeFirebase();
+        displayName.text = "Player: " + authMgr.GetCurrentUserDisplayName();
     }
 
     public void InitializeFirebase()

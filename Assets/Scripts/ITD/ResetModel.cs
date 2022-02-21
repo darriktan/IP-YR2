@@ -8,9 +8,12 @@ public class ResetModel : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.transform.position = new Vector3(resetSpawn.transform.position.x,
-            resetSpawn.transform.position.y, resetSpawn.transform.position.x);
-        Debug.Log("pls reset");
+        if(collision.gameObject.tag == "ResetColliders")
+        {
+            collision.gameObject.transform.position = new Vector3(resetSpawn.gameObject.transform.position.x,
+            resetSpawn.gameObject.transform.position.y, resetSpawn.gameObject.transform.position.x);
+            Debug.Log("pls reset");
+        }
     }
     // Update is called once per frame
     void Update()

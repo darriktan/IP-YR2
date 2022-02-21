@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3625906148917902589}
-  m_Mesh: {fileID: -5597002278806442958, guid: f9dacdacd0dc81d4b92cb7397276ff82, type: 3}
+  m_Mesh: {fileID: -5597002278806442958, guid: 8418149bcaafb9f4fb1fb9831781fab7, type: 3}
 --- !u!23 &1135963262828966148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4930275103439877303}
-  m_Mesh: {fileID: 6329158148709259305, guid: f9dacdacd0dc81d4b92cb7397276ff82, type: 3}
+  m_Mesh: {fileID: 6329158148709259305, guid: 8418149bcaafb9f4fb1fb9831781fab7, type: 3}
 --- !u!23 &812403903510013225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 7013477504411894372}
   - component: {fileID: 4293868139227515498}
   - component: {fileID: 759078793202648612}
+  - component: {fileID: 8188750076302727775}
   m_Layer: 8
   m_Name: ointment
   m_TagString: Untagged
@@ -224,7 +225,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &759078793202648612
 MonoBehaviour:
@@ -341,3 +342,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8188750076302727775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291354267707357053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05a205f8949494cbd9d038a1072503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetSpawn: {fileID: 0}

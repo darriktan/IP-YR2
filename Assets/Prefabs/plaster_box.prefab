@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8823700734185445589}
   - component: {fileID: 1551749730181535581}
   - component: {fileID: 4927460085136021382}
+  - component: {fileID: -7115066051349338018}
   m_Layer: 8
   m_Name: plaster_box
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &1551749730181535581
 MonoBehaviour:
@@ -228,3 +229,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.010543704, z: 0.0060640825}
   m_Center: {x: 0, y: -0.000011622906, z: -0.0024363473}
+--- !u!114 &-7115066051349338018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326422021445809257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05a205f8949494cbd9d038a1072503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetSpawn: {fileID: 0}

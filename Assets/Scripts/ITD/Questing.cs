@@ -7,8 +7,6 @@ using System;
 public class Questing : MonoBehaviour
 {
     public GameManager theGameManager;
-    //public GameObject bandageBody;
-    //public GameObject cprBody;
 
     public Burns burnScript;
     public Bandaging bandagingScript;
@@ -133,8 +131,7 @@ public class Questing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //bandageBody.gameObject.SetActive(false);
-        //cprBody.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame

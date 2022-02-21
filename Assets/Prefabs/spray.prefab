@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1682115769108528672}
   - component: {fileID: 4067903374461547947}
   - component: {fileID: 744801289622847044}
+  - component: {fileID: 6967147420146100170}
   m_Layer: 8
   m_Name: spray
   m_TagString: Untagged
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6642264614342912162}
-  m_Mesh: {fileID: 6782362796763166227, guid: ad943187d46e20a45b13fbfe6e61b8c3, type: 3}
+  m_Mesh: {fileID: 6782362796763166227, guid: 625231abced90e0458141eb252140760, type: 3}
 --- !u!23 &3938117366342990851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &744801289622847044
 MonoBehaviour:
@@ -228,3 +229,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6967147420146100170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642264614342912162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05a205f8949494cbd9d038a1072503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetSpawn: {fileID: 0}

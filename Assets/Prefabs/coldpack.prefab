@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4823924546257263086}
   - component: {fileID: 3552525051418873464}
   - component: {fileID: 740206922657324072}
+  - component: {fileID: -3230720844677141731}
   m_Layer: 8
   m_Name: coldpack
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &3552525051418873464
 MonoBehaviour:
@@ -229,6 +230,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.958519, y: 3.0981965, z: 6.110152}
   m_Center: {x: 10.954003, y: 83.36623, z: -0.0053048134}
+--- !u!114 &-3230720844677141731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202917157776615020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05a205f8949494cbd9d038a1072503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetSpawn: {fileID: 0}
 --- !u!1 &8200420031003893349
 GameObject:
   m_ObjectHideFlags: 0

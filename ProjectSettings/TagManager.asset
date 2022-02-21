@@ -11,6 +11,7 @@ TagManager:
   - bThirdCollider
   - bFourthCollider
   - Sockets
+  - ResetColliders
   layers:
   - Default
   - TransparentFX
